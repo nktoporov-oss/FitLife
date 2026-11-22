@@ -2,21 +2,6 @@
 WATER_PER_KG = 30  # Рекомендуемое количество воды в мл на кг веса
 ML_PER_LITER = 1000  # Количество миллилитров в литре
 
-
-def ask_number(prompt, min_value, max_value, number_type=float):
-    """Спрашивает число от min_value до max_value."""
-    while True:
-        answer = input(prompt).replace(',', '.')
-        try:
-            number = number_type(answer)
-        except ValueError:
-            print('Пожалуйста, введите корректное число.')
-            continue
-        if min_value <= number <= max_value:
-            return number
-        print(f'Пожалуйста, введите число от {min_value} до {max_value}.')
-
-
 # Приветствуем пользователя
 print('Добро пожаловать в FitLife!')
 print('-' * 40)
@@ -24,11 +9,11 @@ print('-' * 40)
 # Запрашиваем данные пользователя
 user_name = input('Пожалуйста, введите ваше имя: ')
 print(f'Привет, {user_name}!')
-user_age = ask_number('Введите ваш возраст: ', 14, 130, int)
+user_age = int(input('Введите ваш возраст: '))
 
 # Сбор параметров и расчеты
-user_weight = ask_number('Введите ваш вес (в кг), например 79.5: ', 30, 300)
-user_height = ask_number('Введите ваш рост (в м), например 1.75: ', 1, 3)
+user_weight = float(input('Введите ваш вес (в кг), например 79.5: '))
+user_height = float(input('Введите ваш рост (в м), например 1.75: '))
 bmi = round(user_weight / (user_height ** 2), 1)  # Расчет индекса массы тела
 # Расчет рекомендуемого количества воды в литрах
 water_liters = round(user_weight * WATER_PER_KG / ML_PER_LITER, 2)
