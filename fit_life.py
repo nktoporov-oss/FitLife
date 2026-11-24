@@ -60,8 +60,7 @@ while True:
     except ValueError:
         print('Пожалуйста, введите рост числом (например 1.75).')
 
-bmi = round(user_weight / (user_height ** 2), 1)  # Расчет индекса массы тела
-# Расчет рекомендуемого количества воды в литрах
+bmi = round(user_weight / (user_height ** 2), 1)
 water_liters = round(user_weight * WATER_PER_KG / ML_PER_LITER, 2)
 
 print('-' * 40)
