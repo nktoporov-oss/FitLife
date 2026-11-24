@@ -27,7 +27,7 @@ while True:
             print(
                 f'Возраст не может быть меньше {MIN_AGE}'
                 f' или больше {MAX_AGE}.'
-                ' Пожалуйста, введите корректное значение.'
+                ' Пожалуйста, введите корректное значение.',
             )
             continue
         break
@@ -40,7 +40,7 @@ while True:
         if user_weight < MIN_WEIGHT or user_weight > MAX_WEIGHT:
             print(
                 f'Вес должен быть числом от {MIN_WEIGHT} до {MAX_WEIGHT}. '
-                'Пожалуйста, введите корректное значение.'
+                'Пожалуйста, введите корректное значение.',
             )
             continue
         break
@@ -53,7 +53,7 @@ while True:
         if user_height < MIN_HEIGHT or user_height > MAX_HEIGHT:
             print(
                 f'Рост должен быть числом от {MIN_HEIGHT} до {MAX_HEIGHT}. '
-                'Пожалуйста, введите корректное значение.'
+                'Пожалуйста, введите корректное значение.',
             )
             continue
         break
